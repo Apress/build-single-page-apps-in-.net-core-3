@@ -1,0 +1,25 @@
+@typeparam ItemType
+
+<EditForm Model="@Model.Item" OnValidSubmit="@(e => OnSaveClick.InvokeAsync(Model.Item))">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    @FieldsTemplate(Model.Item)
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="button" class="btn btn-warning" @onclick="OnCancelClick">Cancel</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public RenderFragment<ItemType> FieldsTemplate { get; set; }
+
+    [Parameter]
+    public ItemDetailsModel<ItemType> Model { get; set; }
+    
+    [Parameter]
+    public EventCallback<ItemType> OnSaveClick { get; set; }
+    
+    [Parameter]
+    public EventCallback OnCancelClick { get; set; }
+}

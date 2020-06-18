@@ -1,0 +1,31 @@
+{
+  "FilePath": "/Users/micheleaponte/Desktop/backup/book/article-manager-wasm/step7/frontendlib/frontendlib.csproj",
+  "Configuration": {
+    "ConfigurationName": "Default",
+    "LanguageVersion": "3.0",
+    "Extensions": []
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 703
+  },
+  "RootNamespace": "frontendlib",
+  "Documents": [
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/backup/book/article-manager-wasm/step7/frontendlib/_Imports.razor",
+      "TargetPath": "_Imports.razor",
+      "FileKind": "componentImport"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/backup/book/article-manager-wasm/step7/frontendlib/Components/ItemDetails.razor",
+      "TargetPath": "Components\\ItemDetails.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/backup/book/article-manager-wasm/step7/frontendlib/Components/ItemList.razor",
+      "TargetPath": "Components\\ItemList.razor",
+      "FileKind": "component"
+    }
+  ],
+  "SerializationFormat": "0.2"
+}

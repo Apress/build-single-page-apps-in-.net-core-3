@@ -1,0 +1,90 @@
+@page "/articlecategories"
+@inject ICRUDService<ArticleCategoryListItem, ArticleCategoryItem> service;
+
+<h2>Article Categories</h2>
+<div class="mt-3">
+    @if(!string.IsNullOrEmpty(error))
+    {
+    <div class="alert alert-danger">
+        @error
+    </div>
+    }
+
+    @if(currentCategory == null)
+    {
+    <ArticleCategoriesList 
+        ArticleCategoryListItems="articleCategoryListItems"
+        OnAddClick="AddCategory"
+        OnEditClick="EditCategory"
+        OnDeleteClick="DeleteCategory">
+    </ArticleCategoriesList>
+    }
+    else 
+    {
+    <ArticleCategory 
+        Category="currentCategory"
+        OnSaveClick="SaveCategory" 
+        OnCancelClick="ShowList">
+    </ArticleCategory>
+    }
+</div>
+
+@code {
+    private ArticleCategoryListItem[] articleCategoryListItems;
+    private ArticleCategoryItem currentCategory;
+    private string error; 
+    
+    protected override async Task OnInitializedAsync()
+    {
+        await ShowList();
+    }
+
+    public async Task ShowList()
+    {
+        articleCategoryListItems = await service.GetList();
+        this.currentCategory = null;
+    }
+
+    public async Task AddCategory() 
+    {
+        this.currentCategory = await service.GetNew();
+    }
+
+    public async Task EditCategory(ArticleCategoryListItem item) 
+    {
+        this.currentCategory = await service.Get(item.Id);
+    }
+
+    public async Task SaveCategory(ArticleCategoryItem item)
+    {
+        try
+        {
+            if(currentCategory.Id == 0) 
+            {
+                await service.Create(currentCategory);
+            } 
+            else
+            {
+                await service.Update(currentCategory);
+            }
+            await this.ShowList();
+        }
+        catch(Exception ex)
+        {
+            this.error = ex.Message;
+        }
+    }
+
+    public async Task DeleteCategory(ArticleCategoryListItem item)
+    {
+        try
+        {
+            await service.Delete(item.Id);
+            await this.ShowList();
+        }
+        catch(Exception ex)
+        {
+            this.error = ex.Message;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@inherits FieldInputBase<int>
+<div class="form-group">
+    @if (!string.IsNullOrWhiteSpace(Label))
+    {
+    <label for="@Id">@Label: </label>
+    }
+    <InputSelect id="@Id" @bind-Value="@CurrentValueAsString" class="form-control">
+    @foreach(var item in SelectItems) 
+    {
+        <option value="@item.Value">@item.Label</option>
+    }
+    </InputSelect>
+    <ValidationMessage For="@Validation" />
+</div>
+
+@code {
+    [Parameter] public InputSelectItem[] SelectItems { get; set; }
+}

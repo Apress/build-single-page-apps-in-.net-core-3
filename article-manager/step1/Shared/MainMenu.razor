@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <a class="navbar-brand" href="/">Article Manager</a>
+    <ul class="navbar-nav">
+        @foreach (var item in MenuItems)
+        {
+        <li class="nav-item @(item.Active ? "active" : null)">
+            <a class="nav-link" href="#" @onclick="e => OnMenuItemClick.InvokeAsync(item)">@item.Caption</a>
+        </li>   
+        }
+    </ul>
+</nav>
+
+@code {
+
+    [Parameter]
+    public EventCallback<MenuItem> OnMenuItemClick { get; set; }
+    
+    [Parameter]
+    public MenuItem[] MenuItems { get; set; }
+}

@@ -1,0 +1,12 @@
+@page "/"
+@namespace countdown.Pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Countdown App</title>
+</head>
+<body>
+    @(await Html.RenderComponentAsync<Countdown>(RenderMode.ServerPrerendered))
+    <script src="_framework/blazor.server.js"></script>
+</body>
+</html>

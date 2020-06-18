@@ -1,0 +1,41 @@
+@page "/articles"
+
+<h2>Article</h2>
+<div class="mt-3">
+    @if(!string.IsNullOrEmpty(error))
+    {
+    <div class="alert alert-danger">
+        @error
+    </div>
+    }
+
+    @if(articleModel.Item == null)
+    {
+    <ItemList 
+        Model="articlesModel"
+        OnAddClick="AddArticle"
+        OnEditClick="EditArticle"
+        OnDeleteClick="DeleteArticle">
+    </ItemList>
+    }
+    else 
+    {
+    <ItemDetails 
+        ItemType="ArticleItem"
+        Model="articleModel"
+        OnSaveClick="SaveArticle" 
+        OnCancelClick="ShowList">
+        <FieldsTemplate>
+            <FieldInputSelect 
+                Id="category" Label="Category" SelectItems="context.Categories"
+                @bind-Value="context.CategoryId" Validation="@(() => context.CategoryId)" />
+            <FieldInputText 
+                Id="title" Label="Title"
+                @bind-Value="context.Title" Validation="@(() => context.Title)" />
+            <FieldInputTextArea 
+                Id="content" Label="Content" 
+                @bind-Value="context.Content" Validation="@(() => context.Content)" />
+        </FieldsTemplate>
+    </ItemDetails>
+    }
+</div>

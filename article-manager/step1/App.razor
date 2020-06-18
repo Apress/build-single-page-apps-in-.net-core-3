@@ -1,0 +1,30 @@
+<MainMenu MenuItems="MenuItems" OnMenuItemClick="MenuItemClick" />
+<div class="container mt-3">
+    <h2>Article Manager</h2>
+    <p>Welcome to the article manager app.</p>
+</div>
+
+@code {
+    public MenuItem[] MenuItems { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.loadMenuItems();
+    }
+
+    public void MenuItemClick(MenuItem item)
+    {
+        foreach (var menuItem in MenuItems)
+        {
+            menuItem.Active = false;
+        }
+        item.Active = true;
+    }
+
+    private void loadMenuItems() {
+        this.MenuItems = new MenuItem[] {
+            new MenuItem() { Caption = "Article Categories", Active = true },
+            new MenuItem() { Caption = "Articles", Active = false }
+        };
+    }
+}

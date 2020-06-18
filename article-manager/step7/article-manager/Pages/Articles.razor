@@ -1,0 +1,53 @@
+@page "/articles"
+
+<h2>Article</h2>
+<div class="mt-3">
+    @if(!string.IsNullOrEmpty(error))
+    {
+    <div class="alert alert-danger">
+        @error
+    </div>
+    }
+
+    @if(articleModel.Item == null)
+    {
+    <ItemList 
+        Model="articlesModel"
+        OnAddClick="AddArticle"
+        OnEditClick="EditArticle"
+        OnDeleteClick="DeleteArticle">
+    </ItemList>
+    }
+    else 
+    {
+    <ItemDetails 
+        ItemType="ArticleItem"
+        Model="articleModel"
+        OnSaveClick="SaveArticle" 
+        OnCancelClick="ShowList">
+        <FieldsTemplate>
+            <div class="form-group">
+                <label for="category">Category: </label>
+                <InputSelect id="category" @bind-Value="context.CategoryId" class="form-control">
+                @foreach(var category in context.Categories) 
+                {
+                    <option value="@category.Value">@category.Label</option>
+                }
+                </InputSelect>
+                <ValidationMessage For="@(() => context.CategoryId)" />
+            </div>
+
+            <div class="form-group">
+                <label for="name">Title: </label>
+                <InputText id="name" @bind-Value="context.Title" class="form-control" />
+                <ValidationMessage For="@(() => context.Title)" />
+            </div>
+
+            <div class="form-group">
+                <label for="content">Content: </label>
+                <InputTextArea id="content" @bind-Value="context.Content" class="form-control" />
+            </div>
+        </FieldsTemplate>
+    </ItemDetails>
+    }
+</div>

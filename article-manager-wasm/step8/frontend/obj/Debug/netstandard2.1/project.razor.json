@@ -1,0 +1,56 @@
+{
+  "FilePath": "/Users/micheleaponte/Desktop/backup/book/article-manager-wasm/step8/frontend/frontend.csproj",
+  "Configuration": {
+    "ConfigurationName": "Default",
+    "LanguageVersion": "3.0",
+    "Extensions": []
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 800
+  },
+  "RootNamespace": "frontend",
+  "Documents": [
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/backup/book/article-manager-wasm/step8/frontend/App.razor",
+      "TargetPath": "App.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/backup/book/article-manager-wasm/step8/frontend/Shared/MainLayout.razor",
+      "TargetPath": "Shared\\MainLayout.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/backup/book/article-manager-wasm/step8/frontend/Pages/Articles.razor",
+      "TargetPath": "Pages\\Articles.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/backup/book/article-manager-wasm/step8/frontend/Pages/Index.razor",
+      "TargetPath": "Pages\\Index.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/backup/book/article-manager-wasm/step8/frontend/Shared/Confirm.razor",
+      "TargetPath": "Shared\\Confirm.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/backup/book/article-manager-wasm/step8/frontend/Pages/ArticleCategories.razor",
+      "TargetPath": "Pages\\ArticleCategories.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/backup/book/article-manager-wasm/step8/frontend/Shared/MainMenu.razor",
+      "TargetPath": "Shared\\MainMenu.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/backup/book/article-manager-wasm/step8/frontend/_Imports.razor",
+      "TargetPath": "_Imports.razor",
+      "FileKind": "componentImport"
+    }
+  ],
+  "SerializationFormat": "0.2"
+}

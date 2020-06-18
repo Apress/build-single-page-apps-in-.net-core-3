@@ -1,0 +1,71 @@
+{
+  "FilePath": "/Users/micheleaponte/Desktop/Chapter3/article-manager-wasm/step5/frontend/frontend.csproj",
+  "Configuration": {
+    "ConfigurationName": "Default",
+    "LanguageVersion": "3.0",
+    "Extensions": []
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 800
+  },
+  "RootNamespace": "frontend",
+  "Documents": [
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/Chapter3/article-manager-wasm/step5/frontend/Components/ArticleCategory.razor",
+      "TargetPath": "Components/ArticleCategory.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/Chapter3/article-manager-wasm/step5/frontend/Components/ArticleCategoriesList.razor",
+      "TargetPath": "Components/ArticleCategoriesList.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/Chapter3/article-manager-wasm/step5/frontend/Shared/MainMenu.razor",
+      "TargetPath": "Shared/MainMenu.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/Chapter3/article-manager-wasm/step5/frontend/App.razor",
+      "TargetPath": "App.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/Chapter3/article-manager-wasm/step5/frontend/Components/ArticleList.razor",
+      "TargetPath": "Components/ArticleList.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/Chapter3/article-manager-wasm/step5/frontend/Components/Article.razor",
+      "TargetPath": "Components/Article.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/Chapter3/article-manager-wasm/step5/frontend/Pages/ArticleCategories.razor",
+      "TargetPath": "Pages/ArticleCategories.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/Chapter3/article-manager-wasm/step5/frontend/Pages/Articles.razor",
+      "TargetPath": "Pages/Articles.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/Chapter3/article-manager-wasm/step5/frontend/_Imports.razor",
+      "TargetPath": "_Imports.razor",
+      "FileKind": "componentImport"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/Chapter3/article-manager-wasm/step5/frontend/Pages/Index.razor",
+      "TargetPath": "Pages/Index.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/Chapter3/article-manager-wasm/step5/frontend/Shared/MainLayout.razor",
+      "TargetPath": "Shared/MainLayout.razor",
+      "FileKind": "component"
+    }
+  ],
+  "SerializationFormat": "0.2"
+}

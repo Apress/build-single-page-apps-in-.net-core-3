@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <a class="navbar-brand" href="/">Article Manager</a>
+    <ul class="navbar-nav">
+        @foreach (var item in MenuItems)
+        {
+        <li class="nav-item">
+            <NavLink class="nav-link" href="@item.Href" Match="NavLinkMatch.All">
+                @item.Caption
+            </NavLink>
+        </li>
+        }
+    </ul>
+</nav>
+
+@code {   
+    [Parameter]
+    public MenuItem[] MenuItems { get; set; }
+}

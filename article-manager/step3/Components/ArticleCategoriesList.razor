@@ -1,0 +1,37 @@
+<button class="btn btn-primary" @onclick="OnAddClick">Add Category</button>
+<table class="table mt-3">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Id</th>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var item in ArticleCategoryListItems)
+    {
+    <tr>
+      <td><button class="btn btn-warning" @onclick="e => OnEditClick.InvokeAsync(item)">Edit</button></td>
+      <td>@item.Id</td>
+      <td>@item.Name</td>
+      <td><button class="btn btn-danger" @onclick="e => OnDeleteClick.InvokeAsync(item)">Delete</button></td>
+    </tr>        
+    }
+  </tbody>
+</table>
+
+@code {
+
+    [Parameter]
+    public ArticleCategoryListItem[] ArticleCategoryListItems { get; set; }
+
+    [Parameter]
+    public EventCallback OnAddClick { get; set; }
+
+    [Parameter]
+    public EventCallback<ArticleCategoryListItem> OnEditClick { get; set; }
+
+    [Parameter]
+    public EventCallback<ArticleCategoryListItem> OnDeleteClick { get; set; }
+}

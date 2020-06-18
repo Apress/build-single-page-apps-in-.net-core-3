@@ -1,0 +1,37 @@
+<div class="modal" id="@Id">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">@Title</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        @Message
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" @onclick="OnYesClick">Yes</button>
+        <button type="button" class="btn btn-default" @onclick="OnNoClick">No</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+    [Parameter]
+    public string Title { get; set; }
+    [Parameter]
+    public string Message { get; set; }
+    [Parameter]
+    public EventCallback OnYesClick { get; set; }
+    [Parameter]
+    public EventCallback OnNoClick { get; set; }
+}

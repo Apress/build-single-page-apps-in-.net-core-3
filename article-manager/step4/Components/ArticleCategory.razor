@@ -1,0 +1,27 @@
+<EditForm Model="@Category" OnValidSubmit="@(e => OnSaveClick.InvokeAsync(Category))">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="name">Name: </label>
+        <InputText id="name" @bind-Value="Category.Name" class="form-control" />
+        <ValidationMessage For="@(() => Category.Name)" />
+    </div>
+
+    <div class="form-group">
+        <label for="description">Description: </label>
+        <InputTextArea id="description" @bind-Value="Category.Description" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="button" class="btn btn-warning" @onclick="OnCancelClick">Cancel</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public ArticleCategoryItem Category { get; set; }
+    [Parameter]
+    public EventCallback<ArticleCategoryItem> OnSaveClick { get; set; }
+    [Parameter]
+    public EventCallback OnCancelClick { get; set; }
+}

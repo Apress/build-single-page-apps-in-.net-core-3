@@ -1,0 +1,10 @@
+@inherits FieldInputBase<string>
+
+<div class="form-group">
+    @if (!string.IsNullOrWhiteSpace(Label))
+    {
+    <label for="@Id">@Label: </label>
+    }
+    <InputTextArea id="@Id" @bind-Value="@CurrentValue" class="form-control" />
+    <ValidationMessage For="@Validation" />
+</div>

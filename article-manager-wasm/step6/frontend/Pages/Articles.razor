@@ -1,0 +1,29 @@
+@page "/articles"
+
+<h2>Article</h2>
+<div class="mt-3">
+    @if(!string.IsNullOrEmpty(error))
+    {
+    <div class="alert alert-danger">
+        @error
+    </div>
+    }
+
+    @if(currentArticle == null)
+    {
+    <ArticleList 
+        ArticleListItems="articleListItems"
+        OnAddClick="AddArticle"
+        OnEditClick="EditArticle"
+        OnDeleteClick="DeleteArticle">
+    </ArticleList>
+    }
+    else 
+    {
+    <Article
+        Item="currentArticle"
+        OnSaveClick="SaveArticle" 
+        OnCancelClick="ShowList">
+    </Article>
+    }
+</div>

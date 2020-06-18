@@ -1,0 +1,39 @@
+<EditForm Model="@Item" OnValidSubmit="@(e => OnSaveClick.InvokeAsync(Item))">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="category">Category: </label>
+        <InputSelect id="category" @bind-Value="Item.CategoryId" class="form-control">
+        @foreach(var category in Item.Categories) 
+        {
+            <option value="@category.Value">@category.Label</option>
+        }
+        </InputSelect>
+        <ValidationMessage For="@(() => Item.CategoryId)" />
+    </div>
+
+    <div class="form-group">
+        <label for="name">Title: </label>
+        <InputText id="name" @bind-Value="Item.Title" class="form-control" />
+        <ValidationMessage For="@(() => Item.Title)" />
+    </div>
+
+    <div class="form-group">
+        <label for="content">Content: </label>
+        <InputTextArea id="content" @bind-Value="Item.Content" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="button" class="btn btn-warning" @onclick="OnCancelClick">Cancel</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public ArticleItem Item { get; set; }
+
+    [Parameter]
+    public EventCallback<ArticleItem> OnSaveClick { get; set; }
+    [Parameter]
+    public EventCallback OnCancelClick { get; set; }
+}

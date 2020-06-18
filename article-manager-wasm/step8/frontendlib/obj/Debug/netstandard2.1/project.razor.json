@@ -1,0 +1,46 @@
+{
+  "FilePath": "/Users/micheleaponte/Desktop/backup/book/article-manager-wasm/step8/frontendlib/frontendlib.csproj",
+  "Configuration": {
+    "ConfigurationName": "Default",
+    "LanguageVersion": "3.0",
+    "Extensions": []
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 800
+  },
+  "RootNamespace": "frontendlib",
+  "Documents": [
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/backup/book/article-manager-wasm/step8/frontendlib/Components/ItemList.razor",
+      "TargetPath": "Components\\ItemList.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/backup/book/article-manager-wasm/step8/frontendlib/Components/FieldInputSelect.razor",
+      "TargetPath": "Components\\FieldInputSelect.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/backup/book/article-manager-wasm/step8/frontendlib/Components/FieldInputText.razor",
+      "TargetPath": "Components\\FieldInputText.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/backup/book/article-manager-wasm/step8/frontendlib/_Imports.razor",
+      "TargetPath": "_Imports.razor",
+      "FileKind": "componentImport"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/backup/book/article-manager-wasm/step8/frontendlib/Components/ItemDetails.razor",
+      "TargetPath": "Components\\ItemDetails.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/micheleaponte/Desktop/backup/book/article-manager-wasm/step8/frontendlib/Components/FieldInputTextArea.razor",
+      "TargetPath": "Components\\FieldInputTextArea.razor",
+      "FileKind": "component"
+    }
+  ],
+  "SerializationFormat": "0.2"
+}

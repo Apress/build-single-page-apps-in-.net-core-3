@@ -1,0 +1,39 @@
+@inherits ArticleCategoriesBase
+@page "/articlecategories"
+
+<h2>Article Categories</h2>
+<div class="mt-3">
+    @if(!string.IsNullOrEmpty(error))
+    {
+    <div class="alert alert-danger">
+        @error
+    </div>
+    }
+
+    @if(categoryModel.Item == null)
+    {
+        <ItemList
+            Model="categoriesModel"
+            OnAddClick="AddCategory"
+            OnEditClick="EditCategory"
+            OnDeleteClick="DeleteCategory">
+        </ItemList>
+    }
+    else 
+    {
+        <ItemDetails 
+            ItemType="ArticleCategoryItem"
+            Model="categoryModel"
+            OnSaveClick="SaveCategory" 
+            OnCancelClick="ShowList">
+            <FieldsTemplate Context="Category">
+                <FieldInputText 
+                    Id="name" Label="Name"
+                    @bind-Value="Category.Name" Validation="@(() => Category.Name)" />
+                <FieldInputTextArea 
+                    Id="description" Label="Description" 
+                    @bind-Value="Category.Description" Validation="@(() => Category.Description)" />
+            </FieldsTemplate>
+        </ItemDetails>
+    }
+</div>
